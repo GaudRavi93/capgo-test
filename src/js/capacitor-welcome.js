@@ -79,7 +79,7 @@ window.customElements.define(
           This demo shows how to call Capacitor plugins. Say cheese!
         </p>
         <p>
-          <button class="button" id="take-photo">Take Photo</button>
+          <button class="button" id="take-photo">Take Photo updated</button>
         </p>
         <p>
           <img id="image" style="max-width: 100%">

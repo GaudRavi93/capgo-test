@@ -3,6 +3,9 @@
   "appName": "capgo-test",
   "webDir": "dist",
   "plugins": {
+    "CapacitorUpdater": {
+      "autoUpdate": true
+    },
     "SplashScreen": {
       "launchAutoHide": false
     }
