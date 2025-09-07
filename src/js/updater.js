@@ -49,7 +49,7 @@ async function checkForUpdates() {
       console.log('Update downloaded successfully, applying...')
       await CapacitorUpdater.set(version)
       console.log('Update applied, reloading app...')
-      window.location.reload()
+      // window.location.reload()
     }
   } catch (error) {
     console.error('Update check failed:', error)
@@ -69,6 +69,11 @@ async function runUpdater() {
     console.error('CapacitorUpdater init failed', err)
   }
 }
+
+CapacitorUpdater.addListener("download", (info) => {
+  localStorage.setItem(`downloadPercent-${Date.now()}`, info.percent)
+  console.log("download was fired", info.percent);
+});
 
 // Run the updater when the script loads
 runUpdater()
