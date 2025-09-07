@@ -4,10 +4,18 @@
   "webDir": "dist",
   "plugins": {
     "CapacitorUpdater": {
-      "autoUpdate": true
+      "autoUpdate": false,
+      "updateUrl": "https://github.com/GaudRavi93/capgo-test/releases/latest/download/build.zip",
+      "channel": "production",
+      "timeout": 30000
     },
     "SplashScreen": {
-      "launchAutoHide": false
+      "launchAutoHide": false,
+      "showSpinner": true,
+      "spinnerColor": "#ffffff"
     }
+  },
+  "server": {
+    "androidScheme": "https"
   }
 }
